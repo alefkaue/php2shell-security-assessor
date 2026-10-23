@@ -25,8 +25,8 @@ test_report_html_escapes_input (test_assessor.FileAndCLITests.test_report_html_e
 test_sbom_does_not_match_phpunit (test_assessor.FileAndCLITests.test_sbom_does_not_match_phpunit) ... ok
 
 ----------------------------------------------------------------------
-Ran 22 tests in 0.039s
+Ran 22 tests in 0.045s
 
 OK
 lab                      affected_version       critical
-Reports: $TMP\tmptmfrmha3\out
+Reports: $TMP\tmp4_m0mwet\out

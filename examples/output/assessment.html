@@ -3,6 +3,7 @@
 Offline inventory assessment; no exploitation or proof of compromise.
 
 Advisory snapshot: 2026-10-23
+Published advisory CVSS v4: 9.2. Asset severity is local remediation priority, not a recalculated CVSS score.
 Input SHA-256: 88f4ef6dadcb560dbf6dae7f6ec819f349387e30f1a4e0a94a559f1d28ec130e
 
 | Asset | Version | Classification | Severity | Exposure |
