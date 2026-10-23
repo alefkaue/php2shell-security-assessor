@@ -10,6 +10,8 @@ def render(results, input_hash=None):
     return {"tool": "php2shell-security-assessor", "schema_version": 1,
             "scope": "Offline inventory assessment; no exploitation or proof of compromise.",
             "advisory_reviewed_on": ADVISORY["reviewed_on"], "cves": ADVISORY["ids"],
+            "advisory_cvss_v4": ADVISORY["cvss_v4"],
+            "severity_meaning": "Asset severity is local remediation priority, not a recalculated CVSS score.",
             "input_sha256": input_hash, "references": ADVISORY["references"],
             "summary": dict(Counter(x["status"] for x in results)), "assets": results}
 
@@ -18,6 +20,7 @@ def markdown(report):
     clean = lambda s: str(s).replace("|", "\\|").replace("\r", " ").replace("\n", " ")
     lines = ["# PHP security assessment", "", report["scope"], "",
              f"Advisory snapshot: {report['advisory_reviewed_on']}",
+             f"Published advisory CVSS v4: {report['advisory_cvss_v4']}. {report['severity_meaning']}",
              f"Input SHA-256: {report['input_sha256'] or 'local measurement'}", "",
              "| Asset | Version | Classification | Severity | Exposure |",
              "|---|---|---|---|---|"]

@@ -44,6 +44,7 @@ php2shell-assessor --help
 Each asset also records `cve_assessment`, lifecycle state, evidence kind, source evidence,
 exposure, reasons, configuration observations and recommendations. Internet exposure
 raises remediation priority; it does not prove that an exploit works.
+The report retains the published CVSS v4 score separately; per-asset `severity` is local remediation priority, not a recalculated CVSS score.
 
 ## Inputs and examples
 

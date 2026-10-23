@@ -113,6 +113,8 @@ class FileAndCLITests(unittest.TestCase):
 
     def test_report_html_escapes_input(self):
         report = render([assess({"id": "<script>alert(1)</script>", "version": "8.5.11"}, DAY)])
+        self.assertEqual(report["advisory_cvss_v4"], 9.2)
+        self.assertIn("priority", report["severity_meaning"])
         self.assertNotIn("<script>", html_report(report))
         self.assertIn("&lt;script&gt;", html_report(report))
 
