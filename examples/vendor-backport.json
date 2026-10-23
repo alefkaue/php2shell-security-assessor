@@ -1,0 +1,6 @@
+[
+  {"id":"synthetic-vendor-attestation","version":"8.2.30-1+vendor2","vendor_package":true,
+   "evidence_kind":"inventory","exposure":"internal",
+   "vendor_fix":{"verified":true,"advisories":["CVE-2026-109618","CVE-2026-109619"],
+                 "reference":"https://vendor.example/advisories/SYNTHETIC-ONLY"}}
+]

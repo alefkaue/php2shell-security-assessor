@@ -1,0 +1,11 @@
+SYNTHETIC LOCAL DEMO — NOT ORIGINAL / PRODUCTION EVIDENCE
+
+$ python -m php_assessor --inventory examples/inventory.json --as-of 2026-10-23 --out examples/output
+
+lab-web-a                affected_version       critical
+lab-web-b                fixed_upstream         info
+lab-legacy               unsupported            high
+lab-vendor               needs_vendor_review    high
+lab-banner               unknown                review
+lab-unknown              unknown                review
+Reports: examples\output

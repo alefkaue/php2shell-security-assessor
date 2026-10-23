@@ -1,0 +1,4 @@
+id,version,exposure,sapi,evidence_kind
+synthetic-affected,8.3.35,internet,fpm,inventory
+synthetic-fixed,8.3.36,internal,fpm,inventory
+synthetic-unknown,,unknown,unknown,inventory

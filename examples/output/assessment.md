@@ -1,0 +1,71 @@
+# PHP security assessment
+
+Offline inventory assessment; no exploitation or proof of compromise.
+
+Advisory snapshot: 2026-10-23
+Input SHA-256: 88f4ef6dadcb560dbf6dae7f6ec819f349387e30f1a4e0a94a559f1d28ec130e
+
+| Asset | Version | Classification | Severity | Exposure |
+|---|---|---|---|---|
+| lab-web-a | 8.4.26 | affected_version | critical | internet |
+| lab-web-b | 8.5.12 | fixed_upstream | info | internal |
+| lab-legacy | 8.1.34 | unsupported | high | internal |
+| lab-vendor | 8.2.30-1+vendor2 | needs_vendor_review | high | internet |
+| lab-banner | 8.5.11 | unknown | review | internet |
+| lab-unknown |  | unknown | review | unknown |
+
+## lab-web-a
+
+Evidence: Synthetic stock-runtime inventory, NOT an external scan
+- Supplied stock version falls within the published affected range; this does not establish exploitability or compromise.
+- Verify the runtime used by EACH web worker, container and bundled application.
+- Apply the supported upstream release or a documented vendor backport; restart every worker and verify the running build.
+- Prioritise this internet-facing asset; if patching is delayed, assess isolation and the vendor's partial mitigations.
+- UPLOAD_PROGRESS_PATH: Confirmed session paths remain enabled. Vendor temporary advice disables upload progress before parsing and restarts ALL workers; this is not a complete fix.
+- OOM_REVIEW: Review memory and request-size controls with the official advisory. memory_limit=-1 is not a complete fix and can increase availability risk; no automatic changes are made.
+
+## lab-web-b
+
+Evidence: Operator-supplied inventory
+- The supplied version is in the upstream fixed range for BOTH listed CVEs, not a guarantee of general security.
+
+## lab-legacy
+
+Evidence: Operator-supplied inventory
+- This branch has no stable threshold in the reviewed advisory snapshot.
+- Branch is outside upstream security support as of the selected assessment date, even if an incident-specific vendor fix exists.
+- Verify the runtime used by EACH web worker, container and bundled application.
+- Apply the supported upstream release or a documented vendor backport; restart every worker and verify the running build.
+- Plan migration to a supported branch; an emergency source backport does not restore upstream lifecycle support.
+
+## lab-vendor
+
+Evidence: Operator-supplied inventory
+- Upstream version precedes the fix, but a distributor may have backported it. Verify the exact package build with the vendor.
+- Verify the runtime used by EACH web worker, container and bundled application.
+- Apply the supported upstream release or a documented vendor backport; restart every worker and verify the running build.
+- Prioritise this internet-facing asset; if patching is delayed, assess isolation and the vendor's partial mitigations.
+
+## lab-banner
+
+Evidence: Operator-supplied inventory
+- Header/tag metadata is not proof of the installed runtime or applied patches.
+- Verify the runtime used by EACH web worker, container and bundled application.
+- Apply the supported upstream release or a documented vendor backport; restart every worker and verify the running build.
+- Prioritise this internet-facing asset; if patching is delayed, assess isolation and the vendor's partial mitigations.
+
+## lab-unknown
+
+Evidence: Operator-supplied inventory
+- No complete PHP version could be established.
+- Verify the runtime used by EACH web worker, container and bundled application.
+- Apply the supported upstream release or a documented vendor backport; restart every worker and verify the running build.
+
+## Official references
+- https://www.php.net/archive/2026.php
+- https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w
+- https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp
+- https://www.php.net/supported-versions.php
+- https://www.cert.europa.eu/publications/security-advisories/2026-018
+- https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php
+- https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/

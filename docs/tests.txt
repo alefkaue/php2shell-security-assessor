@@ -1,0 +1,32 @@
+Local test run; filesystem paths redacted.
+
+test_all_branch_boundaries (test_assessor.AssessmentTests.test_all_branch_boundaries) ... ok
+test_config_is_advisory_not_a_fixed_version_claim (test_assessor.AssessmentTests.test_config_is_advisory_not_a_fixed_version_claim) ... ok
+test_config_redacts_unrelated_values (test_assessor.AssessmentTests.test_config_redacts_unrelated_values) ... ok
+test_distributor_packages_need_review (test_assessor.AssessmentTests.test_distributor_packages_need_review) ... ok
+test_eol_survives_an_incident_specific_fix (test_assessor.AssessmentTests.test_eol_survives_an_incident_specific_fix) ... ok
+test_internet_priority_does_not_prove_exploitation (test_assessor.AssessmentTests.test_internet_priority_does_not_prove_exploitation) ... ok
+test_invalid_input_enums (test_assessor.AssessmentTests.test_invalid_input_enums) ... ok
+test_missing_malformed_future_and_prerelease (test_assessor.AssessmentTests.test_missing_malformed_future_and_prerelease) ... ok
+test_snapshot_cannot_claim_knowledge_before_review (test_assessor.AssessmentTests.test_snapshot_cannot_claim_knowledge_before_review) ... ok
+test_stale_snapshot_warns (test_assessor.AssessmentTests.test_stale_snapshot_warns) ... ok
+test_untrusted_banners_and_tags_never_confirm_affected (test_assessor.AssessmentTests.test_untrusted_banners_and_tags_never_confirm_affected) ... ok
+test_vendor_attestation_requires_both_cves_and_reference (test_assessor.AssessmentTests.test_vendor_attestation_requires_both_cves_and_reference) ... ok
+test_version_comparison_is_numeric (test_assessor.AssessmentTests.test_version_comparison_is_numeric) ... ok
+test_cli_invalid_json_returns_two (test_assessor.FileAndCLITests.test_cli_invalid_json_returns_two) ... error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+ok
+test_cli_writes_three_reports_and_risk_exit_code (test_assessor.FileAndCLITests.test_cli_writes_three_reports_and_risk_exit_code) ... ok
+test_docker_does_not_treat_tags_as_runtime_proof (test_assessor.FileAndCLITests.test_docker_does_not_treat_tags_as_runtime_proof) ... ok
+test_empty_and_duplicate_inputs_fail (test_assessor.FileAndCLITests.test_empty_and_duplicate_inputs_fail) ... ok
+test_ini_duplicates_and_unknown_directives (test_assessor.FileAndCLITests.test_ini_duplicates_and_unknown_directives) ... ok
+test_inventory_csv_and_provenance (test_assessor.FileAndCLITests.test_inventory_csv_and_provenance) ... ok
+test_local_is_explicit_and_shell_free (test_assessor.FileAndCLITests.test_local_is_explicit_and_shell_free) ... ok
+test_report_html_escapes_input (test_assessor.FileAndCLITests.test_report_html_escapes_input) ... ok
+test_sbom_does_not_match_phpunit (test_assessor.FileAndCLITests.test_sbom_does_not_match_phpunit) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.039s
+
+OK
+lab                      affected_version       critical
+Reports: $TMP\tmptmfrmha3\out
