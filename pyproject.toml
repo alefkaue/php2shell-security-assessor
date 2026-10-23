@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "php2shell-security-assessor"
+version = "1.0.0"
+description = "Evidence-aware offline PHP security inventory assessment"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+authors = [{name = "Alef Kaue Santos Nunes"}]
+
+[project.scripts]
+php2shell-assessor = "php_assessor.__main__:main"
+
+[tool.setuptools.package-data]
+php_assessor = ["advisory.json"]
+
+[tool.setuptools.packages.find]
+include = ["php_assessor*"]

@@ -1,0 +1,20 @@
+{
+  "reviewed_on": "2026-10-23",
+  "ids": ["CVE-2026-109618", "CVE-2026-109619"],
+  "cvss_v4": 9.2,
+  "branches": {
+    "8.2": {"fixed": "8.2.35", "security_end": "2026-12-31"},
+    "8.3": {"fixed": "8.3.36", "security_end": "2027-12-31"},
+    "8.4": {"fixed": "8.4.27", "security_end": "2028-12-31"},
+    "8.5": {"fixed": "8.5.12", "security_end": "2029-12-31"}
+  },
+  "references": [
+    "https://www.php.net/archive/2026.php",
+    "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+    "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+    "https://www.php.net/supported-versions.php",
+    "https://www.cert.europa.eu/publications/security-advisories/2026-018",
+    "https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php",
+    "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
+  ]
+}
