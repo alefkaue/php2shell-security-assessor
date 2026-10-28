@@ -1,5 +1,7 @@
 # PHP2Shell Security Assessor
 
+**Portfolio area:** [Cybersecurity](https://github.com/alefkaue#cybersecurity) · **Context:** Personal project
+
 Offline, evidence-aware triage for **CVE-2026-109618** and **CVE-2026-109619**.
 Built by Alef Kaue Santos Nunes as a personal learning project with AI-assisted development.
 It inventories supplied evidence; it does not exploit servers or certify that a host is safe.
