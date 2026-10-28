@@ -1,7 +1,5 @@
 # Avaliação defensiva de inventários PHP
 
-**Área do portfólio:** [Cybersecurity](https://github.com/alefkaue#cybersecurity) · **Contexto:** Projeto pessoal
-
 Projeto pessoal de Alef Kaue Santos Nunes, desenvolvido com assistência de IA e testes automatizados.
 Lê inventários locais, distingue evidência de suposição e gera relatórios. Não explora RCE nem faz varreduras.
 
